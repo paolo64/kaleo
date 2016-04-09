@@ -1,0 +1,38 @@
+<h1>Kaleo</h1>
+
+<p>Kaleo is a service running on  <a href="https://playframework.com/" title="Play Framework">Play Framework</a>, able to run concurrent HTTP/HTTPS calls to remote services.</p>
+
+<p>It returns a json structure containing the list of responses from the single service called.</p>
+
+<h2>Requirements</h2>
+
+<p>It has been developed an tested on Play Framework 2.5.</p>
+
+<ul>
+<li>Java 8.X</li>
+<li>Play Framework 2.5.X</li>
+</ul>
+
+<h2>Getting Started</h2>
+
+<p>ToDo</p>
+
+<h2>How To invoke it</h2>
+
+<p>Kaleo expones just one API for <strong>HTTP POST</strong> method:
+<code>
+http://hostname:9000/geturldata
+</code></p>
+
+<p>The payload of data posted should be a json containing a key-value structure, where <em>key</em> is just a <strong>callId</strong> and <em>value</em> is the <strong>service's url</strong> to be called.
+e.g.</p>
+
+<p><code>
+{
+"c1":"http://localhost:8983/solr/attributes/select?q=uid:277&amp;wt=json",
+"c2":"http://localhost:8983/solr/attributes/select?q=uid:273&amp;wt=json",
+"c3":"http://localhost:8983/solr/attributes/select?q=*:*&amp;wt=json&amp;rows=1"
+}
+</code></p>
+
+<p>The <em>client_for_test</em> directory contains a curl based script and the data example to run a test.</p>

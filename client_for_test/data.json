@@ -1,0 +1,5 @@
+{
+"c1":"http://localhost:8983/solr/attributes/select?q=uid:277&wt=json",
+"c2":"http://localhost:8983/solr/attributes/select?q=uid:273&wt=json",
+"c3":"http://localhost:8983/solr/attributes/select?q=*:*&wt=json&rows=100"
+}
